@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import { signIn,useSession } from "next-auth/react";
+import { signIn,signOut,useSession } from "next-auth/react";
 import React from "react";
 
 const NavBar = () => {
@@ -16,7 +16,11 @@ const NavBar = () => {
 			</Link>
 			{status==="loading" &&  <div>Loading ...</div>}
 
-			{status === "authenticated" && <div>{session.user!.name}</div>}
+			{status === "authenticated" &&
+			 <div onClick={()=>signOut()}>
+				{session.user!.name}
+				<button className="ml-5" onClick={()=>signOut()} >Sign out </button>
+			 </div>}
 			{	status === "unauthenticated" && <button onClick={()=>signIn()} className="mr-5">
 				Login
 			</button>}
