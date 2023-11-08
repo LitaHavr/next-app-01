@@ -1,3 +1,4 @@
+import { NextResponse } from "next/server"
 import {Resend} from "resend"
 
 import WelcomeTemplate from "@/emails/WelcomeTemplate"
@@ -10,4 +11,5 @@ export async function POST() {
 		subject:"....",
 		react: WelcomeTemplate ({name:"lita"})
 	})
+	return NextResponse.json({})
 }
