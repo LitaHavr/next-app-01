@@ -1,5 +1,5 @@
 import {Body,Container,Html,Link,Preview,Tailwind,Text} from "@react-email/components"
-import React,{CSSProperties} from 'react'
+import React from 'react'
 const WelcomeTemplate = ({name}:{name:string}) => {
 	return (
 <Html>
@@ -11,15 +11,11 @@ const WelcomeTemplate = ({name}:{name:string}) => {
       <Link href='https://giphy.com/clips/studiosoriginals-party-podalienz-6N3MIPOsVHSuboy9Qw'>Want to belive?</Link>
 
 		</Container>
-	</Body></Tailwind>
+	</Body>
+	</Tailwind>
 </Html>	)
 }
 
-const body: CSSProperties ={
-	background:"#fff"
-}
-const heading: CSSProperties={
-	fontSize:"32px"
-}
+
 
 export default WelcomeTemplate
