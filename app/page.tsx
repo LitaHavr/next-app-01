@@ -11,3 +11,14 @@ export default async function Home() {
 		</main>
 	);
 }
+
+
+// just an example of 
+export async function generateMetada():Promise<Metada>{
+	const product = await fetch("")
+
+	return{
+		title:"product.title",
+		description:"..."
+	}
+}
