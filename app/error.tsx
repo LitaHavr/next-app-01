@@ -6,7 +6,7 @@ interface Props {
   reset: () => void;
 }
 
-const ErrorPage = ({ error, reset }: Props) => {
+const ErrorPage = ({  reset }: Props) => {
 
   return (
     <>

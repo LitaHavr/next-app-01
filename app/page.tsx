@@ -10,6 +10,7 @@ export default  function Home() {
 					{name:"b"},
 					{name:"d"}
 				]
+				// eslint-disable-next-line
 				const sortedUsers=_.orderBy(users,["name"])
 			}}>Show</button>
       
@@ -19,11 +20,11 @@ export default  function Home() {
 
 
 // just an example of 
-export async function generateMetada():Promise<Metada>{
-	const product = await fetch("")
+// export async function generateMetada():Promise<Metada>{
+// 	const product = await fetch("")
 
-	return{
-		title:"product.title",
-		description:"..."
-	}
-}
+// 	return{
+// 		title:"product.title",
+// 		description:"..."
+// 	}
+// }

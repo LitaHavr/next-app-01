@@ -8,7 +8,6 @@ interface Props {
 }
 
 const UsersPage = ({ searchParams: { sortOrder } }: Props) => {
-	console.log(sortOrder);
 	return (
 		<>
 			<div>UsersPage</div>

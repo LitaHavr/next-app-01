@@ -12,7 +12,7 @@ const UploadPage = () => {
 			{publicId && <CldImage src={publicId} width={270} height={180} alt="marvel"/>}
 			<CldUploadWidget
 			options={{sources:["camera","local","google_drive"],multiple:false,maxFiles:5}}
-			 uploadPreset='xlx3s4ip' onUpload={(result,widget)=>{if(result.event!=="success")return
+			 uploadPreset='xlx3s4ip' onUpload={(result)=>{if(result.event!=="success")return
 			const info = result.info as CloudinaryResult
 		 setPublicId(info.public_id)
 		}}>

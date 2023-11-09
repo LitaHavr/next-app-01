@@ -6,7 +6,7 @@ import prisma from "@/prisma/client"
 import schema from "../schema";
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
 	const user = await prisma.user.findUnique({
-		where:{id:parseInt(params.id)}
+		where:{id:params.id}
 	})
 	if (!user) {
 		return NextResponse.json({ error: "User not found " }, { status: 404 });
@@ -20,7 +20,7 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
 	if (!validation.success) return NextResponse.json(validation.error.errors, { status: 400 });
 	const  user = await prisma.user.findUnique({
 		where:{
-			id:parseInt(params.id)
+			id:params.id
 		}
 	})
 	if (!user ) {
@@ -43,7 +43,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
 
 	const  user = await prisma.user.findUnique({
 		where:{
-			id:parseInt(params.id)
+			id:params.id
 		}
 	})
 	if (!user) {

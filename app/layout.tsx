@@ -1,18 +1,11 @@
 import './globals.css'
 
 import type { Metadata } from 'next'
-import { Inter,Roboto } from 'next/font/google'
 import localFont from "next/font/local"
 
 import AuthProvider from './auth/Provider'
 import NavBar from './NavBar'
 
-const inter = Inter({ subsets: ['latin'] })
-
-const roboto = Roboto({
-  subsets:['latin'],
-  weight:["400","500"]
-})
 
 const poppins = localFont({
   src:"../public/fonts/poppins-regular-webfont.woff2",
